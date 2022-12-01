@@ -7,12 +7,7 @@ import pandas as pd
 import seaborn as sns
 from matplotlib import pyplot as plt
 import statistics as st
-import os
-import functions as f
 
-path="C:\\Users\\hseym\\OneDrive\\Masaüstü\\Yeni klasör\\sample data and codes\\World_Happiness_Report"
-os.chdir(path)
-f.display()
 data_2015 = pd.read_csv("2015.csv")
 data_2016 = pd.read_csv("2016.csv")
 data_2017 = pd.read_csv("2017.csv")
@@ -240,14 +235,16 @@ differ_2015_2019.tail()
 vene_2015 = data_2015[data_2015["Country"]=="Venezuela"].iloc[:,[0,2,3,5,6,7,8,9,10]]
 vene_2016 = data_2016[data_2016["Country"]=="Venezuela"].iloc[:,[0,2,3,6,7,8,9,10,11]]
 vene_2017 = data_2017[data_2017["Country"]=="Venezuela"].iloc[:,[0,1,2,5,6,7,8,9,10]]
-vene_2017 = vene_2017[['Country', 'Happiness_Rank', 'Happiness_Score', 'Economy_GDP_per_Capita', 'Family', 'Health_Life_Expectancy', 'Freedom',
-       'Trust_Government_Corruption', 'Generosity']]
+vene_2017 = vene_2017[['Country', 'Happiness_Rank', 'Happiness_Score', 'Economy_GDP_per_Capita', 'Family', 'Health_Life_Expectancy', 
+                       'Freedom','Trust_Government_Corruption', 'Generosity']]
 vene_2018 = data_2018[data_2018["Country"]=="Venezuela"]
-vene_2018 = vene_2018[["Country","Happiness_Rank","Happiness_Score","GDP_per_capita","Social_support","Healthy_life_expectancy","Freedom_to_make_life_choices","Perceptions_of_corruption","Generosity"]]
+vene_2018 = vene_2018[["Country","Happiness_Rank","Happiness_Score","GDP_per_capita","Social_support","Healthy_life_expectancy","Freedom_to_make_life_choices",
+                       "Perceptions_of_corruption","Generosity"]]
 vene_2018.rename(columns = {"GDP_per_capita":"Economy_GDP_per_Capita","Social_support":"Family","Healthy_life_expectancy":"Health_Life_Expectancy",
                   "Freedom_to_make_life_choices":"Freedom","Perceptions_of_corruption":"Trust_Government_Corruption"}, inplace = True)
 vene_2019 = data_2019[data_2019["Country"]=="Venezuela"]
-vene_2019 = vene_2019[["Country","Happiness_Rank","Happiness_Score","GDP_per_capita","Social_support","Healthy_life_expectancy","Freedom_to_make_life_choices","Perceptions_of_corruption","Generosity"]]
+vene_2019 = vene_2019[["Country","Happiness_Rank","Happiness_Score","GDP_per_capita","Social_support","Healthy_life_expectancy","Freedom_to_make_life_choices",
+                       "Perceptions_of_corruption","Generosity"]]
 vene_2019.rename(columns = {"GDP_per_capita":"Economy_GDP_per_Capita","Social_support":"Family","Healthy_life_expectancy":"Health_Life_Expectancy",
                   "Freedom_to_make_life_choices":"Freedom","Perceptions_of_corruption":"Trust_Government_Corruption"}, inplace = True)
 
